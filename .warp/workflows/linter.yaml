@@ -2,7 +2,7 @@
 # And this help page: https://docs.warp.dev/features/workflows
 name: Linter
 command: |-
-    ~/api_monorepo/linter-checker/linter-check.sh -p ~/api_monorepo/{{path_to_file}}
+    ./linter-check.sh -p ~/api_monorepo/{{path_to_file}}
 tags:
   - lint
   - linter

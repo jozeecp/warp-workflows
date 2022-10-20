@@ -1,11 +1,12 @@
 # Based on example found here: https://github.com/warpdotdev/workflows
 # And this help page: https://docs.warp.dev/features/workflows
-name: sls debugger
+name: Linter - Show Modified Files
 command: |-
-    sls offline start --stage local -c private-serverless.yml
+    ./linter-check.sh -d
 tags:
-  - sls
-  - serverless
-description: Run serverless locally
+  - lint
+  - linter
+  - pain
+description: show modified files (compared to develop)
 author: Jose Catarino
 author_url: "https://github.com/jozeecp"
