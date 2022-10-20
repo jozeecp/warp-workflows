@@ -1,14 +1,11 @@
 # Based on example found here: https://github.com/warpdotdev/workflows
 # And this help page: https://docs.warp.dev/features/workflows
-name: Setup Linter
+name: sls debugger
 command: |-
-    cd ~/api_monorepo/linter-checker
-    source ~/.bashrc
+    sls offline start --stage local
 tags:
-  - setup
-  - lint
-  - linter
-  - pain
-description: Go to linter directory and source bashrc file
+  - sls
+  - serverless
+description: Run serverless locally
 author: Jose Catarino
 author_url: "https://github.com/jozeecp"
