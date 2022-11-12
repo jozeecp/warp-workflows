@@ -1,0 +1,11 @@
+# Based on example found here: https://github.com/warpdotdev/workflows
+# And this help page: https://docs.warp.dev/features/workflows
+name: Create QFX Container
+command: |-
+    cd ~/fargate_monorepo
+    docker build -t qfx-ansible . --file tasks/networking/juniper/qfx/Dockerfile --no-cache
+tags:
+  - workflows
+description: Copy workflow files from repository path
+author: Jose Catarino
+author_url: "https://github.com/jozeecp"

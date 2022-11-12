@@ -1,10 +1,14 @@
 # Based on example found here: https://github.com/warpdotdev/workflows
 # And this help page: https://docs.warp.dev/features/workflows
-name: Update Workflows
+name: Docker Run With Port
 command: |-
-    cp ~/warp-workflows/.warp/workflows/* ~/.warp/workflows/
+    docker run -p 5094:5000 {{image_id}}
 tags:
   - workflows
+arguments:
+  - name: image_id
+    description: Image ID
+    default_value: ~
 description: Copy workflow files from repository path
 author: Jose Catarino
 author_url: "https://github.com/jozeecp"
