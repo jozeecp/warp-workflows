@@ -2,7 +2,7 @@
 # And this help page: https://docs.warp.dev/features/workflows
 name: sls steps deploy
 command: |-
-    time env SLS_DEBUG=* sls deploy -c private-serverless.yml --debug='*' --verbose --aws-profile jose-dev-1 --stage dev-1
+    time env SLS_DEBUG=* sls deploy -c private-serverless-jose.yml --debug='*' --verbose --aws-profile jose-dev-1 --stage dev-1
     echo "=========== $(date) return value $?"
 tags:
   - sls
