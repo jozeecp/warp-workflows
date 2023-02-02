@@ -1,0 +1,11 @@
+# Based on example found here: https://github.com/warpdotdev/workflows
+# And this help page: https://docs.warp.dev/features/workflows
+name: sls clear cache
+command: |-
+    rm -rf ~/Library/Caches/serverless-python-requirements/*
+tags:
+  - sls
+  - serverless
+description: Clear local SLS cache
+author: Jose Catarino
+author_url: "https://github.com/jozeecp"
