@@ -1,0 +1,19 @@
+# Based on example found here: https://github.com/warpdotdev/workflows
+# And this help page: https://docs.warp.dev/features/workflows
+name: Cleanup Branch
+command: |-
+    git diff develop $(git rev-parse --abbrev-ref HEAD) --name-only | while read file; do isort "../$file"; done
+tags:
+  - lint
+  - linter
+  - pain
+description: |
+    Run isort and other like commands to clean up branch.
+    Only runs it on files that diff between current branch
+    and `develop`
+# arguments:
+#   - name: path_to_file
+#     description: The path to your file from the `api_monorepo`. This format was chosen because it's what you get when you click the copy icon on a GH code review.
+#     default_value: ~
+author: Jose Catarino
+author_url: "https://github.com/jozeecp"

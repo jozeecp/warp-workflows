@@ -2,7 +2,7 @@
 # And this help page: https://docs.warp.dev/features/workflows
 name: Update Workflows
 command: |-
-    cp ~/warp-workflows/* ~/.warp/workflows/
+    cp ~/some_projects/warp-workflows/* ~/.warp/workflows/
 tags:
   - workflows
 description: Copy workflow files from repository path
